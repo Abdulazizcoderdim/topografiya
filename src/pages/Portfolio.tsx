@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { MapPin, Users, Download, FileText, Calendar } from "lucide-react"
+import { MapPin, Users, FileText, Calendar } from "lucide-react"
 
 export function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("all")
