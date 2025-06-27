@@ -37,7 +37,7 @@ export function Contact() {
   const onSubmit = async (data: FormData) => {
     console.log(data)
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast.success('Xabaringiz muvaffaqiyatli yuborildi! Tez orada javob beramiz.');
@@ -50,17 +50,17 @@ export function Contact() {
     {
       icon: Phone,
       title: 'Telefon',
-      details: ['+998 71 123 45 67', '+998 90 123 45 67'],
+      details: ['+998 99 035 91 92'],
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@trk.uz', 'office@trk.uz'],
+      details: ['fayziyevshohrux91@gmail.com'],
     },
     {
       icon: MapPin,
       title: 'Manzil',
-      details: ['Toshkent shahri, Yunusobod tumani', 'Bobur ko\'chasi, 12-uy'],
+      details: ['Manzil Qarshi shaxar Navo maxallasi', '12/49'],
     },
     {
       icon: Clock,
@@ -194,7 +194,7 @@ export function Contact() {
                         <FormItem>
                           <FormLabel>Xabar *</FormLabel>
                           <FormControl>
-                            <Textarea 
+                            <Textarea
                               placeholder="Loyihangiz haqida yoki savollaringizni yozing..."
                               className="min-h-[120px]"
                               {...field}
@@ -205,9 +205,9 @@ export function Contact() {
                       )}
                     />
 
-                    <Button 
-                      type="submit" 
-                      size="lg" 
+                    <Button
+                      type="submit"
+                      size="lg"
                       disabled={isSubmitting}
                       className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700"
                     >
@@ -253,13 +253,13 @@ export function Contact() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-4">
-                  Odatda xabarlaringizga 24 soat ichida javob beramiz. Shoshilinch holatlar uchun 
+                  Odatda xabarlaringizga 24 soat ichida javob beramiz. Shoshilinch holatlar uchun
                   to'g'ridan-to'g'ri qo'ng'iroq qiling.
                 </p>
                 <Button size="sm" variant="outline" asChild>
                   <a href="tel:+998711234567">
                     <Phone className="w-4 h-4 mr-2" />
-                    +998 71 123 45 67
+                    +998 99 035 91 92
                   </a>
                 </Button>
               </CardContent>

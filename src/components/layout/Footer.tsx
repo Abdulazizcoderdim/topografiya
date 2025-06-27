@@ -56,11 +56,11 @@ export function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-green-500" />
-                <span className="text-gray-300">+998 71 123 45 67</span>
+                <span className="text-gray-300">+998 99 035 91 92</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-green-500" />
-                <span className="text-gray-300">info@trk.uz</span>
+                <span className="text-gray-300">fayziyevshohrux91@gmail.com</span>
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-green-500" />
