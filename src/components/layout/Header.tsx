@@ -14,6 +14,7 @@ export function Header() {
     { name: 'Biz haqimizda', href: '/biz-haqimizda' },
     { name: 'Xodimlar', href: '/staff' },
     { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Galerya', href: '/gallery' },
     { name: 'Aloqa', href: '/aloqa' },
   ];
 

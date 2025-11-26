@@ -15,7 +15,7 @@ export function Xodimlar({ className }: CompanyTeamProps) {
         startDate: "2023-09-09",
         birthDate: "1991-02-19",
         photo: "/xodimlar/fayziyev.png",
-        email: "director@topokadastir.uz",
+        email: "fayziyevshohrux91@gmail.com",
         phone: "+998 99 035 91 92",
         diplomaLink: "/xodimlar/diplom.pdf",
         specialization: ["Geodeziya", "Topografiya", "Raqamli kadastr", "Boshqaruv"],
@@ -83,26 +83,26 @@ export function Xodimlar({ className }: CompanyTeamProps) {
         phone: "+998 93 482 41 31",
         specialization: ["Geodezik tarmoq qurilishi", "Chegara belgilarini o'rnatish", "Inshoot geometriyasi"],
       },
-      // {
-      //   id: "8",
-      //   fullName: "Savriyev Rustamjon Ravshan o'g'li",
-      //   position: "Geodezist",
-      //   startDate: "2025-07-13",
-      //   photo: "/xodimlar/rus.png",
-      //   email: "geodezist2@topokadastir.uz",
-      //   phone: "+998 97 308-99-01",
-      //   specialization: ["Geodezik tarmoq qurilishi", "Chegara belgilarini o'rnatish", "Inshoot geometriyasi"],
-      // },
-      // {
-      //   id: "9",
-      //   fullName: "Yuldoshev Adham Sharof o'g'li",
-      //   position: "Geodezist",
-      //   startDate: "2025-07-13",
-      //   photo: "/xodimlar/ad.png",
-      //   email: "geodezist2@topokadastir.uz",
-      //   phone: "+998 93 072 44 55",
-      //   specialization: ["Geodezik tarmoq qurilishi", "Chegara belgilarini o'rnatish", "Inshoot geometriyasi"],
-      // },
+      {
+        id: "8",
+        fullName: "TO‘XTAYEV OZOD ILHOM O‘G‘LI",
+        position: "Топография бўйича бош мутахассис",
+        startDate: "2025-07-13",
+        photo: "/xodimlar/ozod.png",
+        email: "ozod@gmail.com",
+        phone: "+998 97 308-99-01",
+        specialization: ["Geodezik tarmoq qurilishi", "Chegara belgilarini o'rnatish", "Inshoot geometriyasi"],
+      },
+      {
+        id: "9",
+        fullName: "NURIDDINOV UMIRZOQ FAYZULLA O‘G‘LI",
+        position: "Муҳандис топограф",
+        startDate: "2025-07-13",
+        photo: "/xodimlar/ad.png",
+        email: "umirzod@gmail.com",
+        phone: "+998 93 072 44 55",
+        specialization: ["Geodezik tarmoq qurilishi", "Chegara belgilarini o'rnatish", "Топограф"],
+      },
     ],
     assistants: [
       {
@@ -110,8 +110,8 @@ export function Xodimlar({ className }: CompanyTeamProps) {
         fullName: "Bekmurodov Davron Baxtiyor o'g'li",
         position: "Yordamchi ishchi",
         startDate: "2024-07-25",
-        photo: "/placeholder.svg?height=200&width=200",
-        email: "assistant@topokadastir.uz",
+        // photo: "/placeholder.svg?height=200&width=200",
+        email: "davron@topokadastir.uz",
         phone: "+998 90 567 89 01",
         specialization: ["Dala ishlari", "Uskunalar tayyorlash", "Ma'lumotlar yig'ish"],
       },
@@ -300,13 +300,15 @@ export function Xodimlar({ className }: CompanyTeamProps) {
               <Card key={employee.id} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <div className="w-16 h-16 relative rounded-full overflow-hidden">
-                      <img
-                        src={employee.photo || "/placeholder.svg"}
-                        alt={employee.fullName}
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
+                      {employee.photo && 
+                      <div className="w-16 h-16 relative rounded-full overflow-hidden">
+                        <img
+                          src={employee.photo || "/placeholder.svg"}
+                          alt={employee.fullName}
+                          className="object-cover w-full h-full"
+                          />
+                      </div>
+                      }
                     <div>
                       <CardTitle className="text-lg">{employee.fullName}</CardTitle>
                       <CardDescription className="text-blue-600">{employee.position}</CardDescription>

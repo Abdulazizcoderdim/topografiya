@@ -8,6 +8,7 @@ import { Contact } from './pages/Contact';
 import { Toaster } from '@/components/ui/sonner';
 import './App.css';
 import { Xodimlar } from './pages/Xodimlar';
+import Gallery from './pages/galery/galerya';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/biz-haqimizda" element={<About />} />
           <Route path="/staff" element={<Xodimlar />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/aloqa" element={<Contact />} />
         </Routes>
       </Layout>
