@@ -23,8 +23,8 @@ export function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 text-start">
-            <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
-              <MapPin className="w-5 h-5 text-white" />
+            <div className="h-20 w-20">
+              <img className='bg-cover bg-center' src='/logo.png'/>
             </div>
             <div className="hidden sm:block">
               <span className="text-lg font-bold text-gray-900">TRK MCHJ</span>
@@ -52,9 +52,9 @@ export function Header() {
 
           {/* Mobile menu button */}
           <Button
-            variant="ghost"
+            variant="outline"
             size="sm"
-            className="md:hidden"
+            className="md:hidden bg-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (

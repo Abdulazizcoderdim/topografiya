@@ -64,7 +64,7 @@ export function Footer() {
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-green-500" />
-                <span className="text-gray-300">Toshkent, Uzbekiston</span>
+                <span className="text-gray-300">Qashqadaryo, Uzbekiston</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Clock className="w-4 h-4 text-green-500" />

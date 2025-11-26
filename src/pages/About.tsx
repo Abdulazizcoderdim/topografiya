@@ -39,9 +39,9 @@ export function About() {
   ]
 
   const workImages = [
-    { src: "/work1.jpg", title: "Dala ishlari - GPS o'lchashlar" },
+    { src: "/work1.jpg", title: "Geodezik asboblar bilan ishlash" },
     { src: "/work2.jpg", title: "Topografik o'lchash jarayoni" },
-    { src: "/work3.jpg", title: "Geodezik asboblar bilan ishlash" },
+    { src: "/work3.jpg", title: "Dala ishlari - GPS o'lchashlar" },
     { src: "/work4.jpg", title: "Yer uchastkasini o'lchash" },
     { src: "/work5.jpg", title: "Kadastr xaritalarini tayyorlash" },
     { src: "/work6.jpg", title: "Kompyuterda ma'lumotlarni qayta ishlash" },
@@ -99,7 +99,7 @@ export function About() {
           </div>
           <div className="relative">
             <img
-              src="https://tift.uz/wp-content/uploads/2024/11/Course-geodesy.jpg"
+              src="/about.jpg"
               alt="Bizning jamoamiz"
               className="rounded-2xl shadow-lg"
             />
@@ -279,7 +279,7 @@ export function About() {
               onClick={() => setSelectedMedia(null)}
               className="absolute -top-12 right-0 text-white hover:text-gray-300 text-xl font-bold"
             >
-              ✕ Yopish
+              ✕ 
             </button>
             <div className="bg-white rounded-lg overflow-hidden">
               <img

@@ -33,7 +33,7 @@ export function Home() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 via-blue-50 to-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-3 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="flex items-center justify-between max-md:flex-col gap-12">
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 Professional{' '}
@@ -58,11 +58,11 @@ export function Home() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative w-full flex justify-center">
               <img
-                src="https://static.norma.uz/images/146394_10930d3a57a96be800ae5a9ce2ce.png"
+                src="/ban.jpg"
                 alt="Geodeziya va topografiya ishlarini amalga oshiruvchi mutaxassis"
-                className="rounded-2xl shadow-2xl"
+                className="rounded-2xl h-[450px] shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg">
                 <div className="flex items-center space-x-2">

@@ -12,10 +12,8 @@ import { toast } from 'sonner';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Ism kamida 2 ta belgi bo\'lishi kerak'),
-  phone: z.string().min(9, 'Telefon raqami to\'g\'ri formatda bo\'lishi kerak'),
-  email: z.string().email('Email manzili to\'g\'ri formatda bo\'lishi kerak').optional().or(z.literal('')),
-  subject: z.string().min(5, 'Mavzu kamida 5 ta belgi bo\'lishi kerak'),
-  message: z.string().min(10, 'Xabar kamida 10 ta belgi bo\'lishi kerak'),
+  phone: z.string().min(5, 'Telefon raqami to\'g\'ri formatda bo\'lishi kerak'),
+  message: z.string().min(5, 'Xabar kamida 10 ta belgi bo\'lishi kerak'),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -28,22 +26,41 @@ export function Contact() {
     defaultValues: {
       name: '',
       phone: '',
-      email: '',
-      subject: '',
       message: '',
     },
   });
 
   const onSubmit = async (data: FormData) => {
-    console.log(data)
+    try {
     setIsSubmitting(true);
+    const url = `https://api.telegram.org/bot${import.meta.env.VITE_PUBLIC_TOKEN}/sendMessage`
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast.success('Xabaringiz muvaffaqiyatli yuborildi! Tez orada javob beramiz.');
-      form.reset();
-      setIsSubmitting(false);
-    }, 1000);
+    const obj = {
+      chat_id: import.meta.env.VITE_PUBLIC_CHAT_ID,
+      text: `
+Ismi: ${data.name}
+Telefon: ${data.phone}
+Xabar: ${data.message}
+      `
+    }
+
+    await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(obj)
+    })
+
+    toast.success('Xabaringiz muvaffaqiyatli yuborildi! Tez orada javob beramiz.');
+
+    form.reset();
+    } catch (error) {
+      console.log(error)
+      toast.error("Xatolik chiqdi, qayta urinib ko'ring!")
+    }finally{
+      setIsSubmitting(false)
+    }
   };
 
   const contactInfo = [
@@ -158,34 +175,6 @@ export function Contact() {
                         )}
                       />
                     </div>
-
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email manzili</FormLabel>
-                          <FormControl>
-                            <Input placeholder="email@example.com" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="subject"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Mavzu *</FormLabel>
-                          <FormControl>
-                            <Input placeholder="Xabar mavzusi" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
 
                     <FormField
                       control={form.control}

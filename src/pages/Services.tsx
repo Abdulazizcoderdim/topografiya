@@ -52,7 +52,7 @@ export function Services({ className }: ServicesProps) {
         "Inshoot geometriyasini nazorat qilish",
         "Deformatsiyani monitoring",
       ],
-      image: "https://images.pexels.com/photos/8728382/pexels-photo-8728382.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: "/xizmat1.webp",
     },
     {
       icon: Database,
@@ -84,6 +84,7 @@ export function Services({ className }: ServicesProps) {
         "Geologik hisobotlar tayyorlash",
       ],
       scales: ["500K", "200K", "100K", "50K", "25K", "10K"],
+      image: "/xizmat2.jpg",
     },
     {
       icon: FlaskConical,
@@ -98,6 +99,7 @@ export function Services({ className }: ServicesProps) {
         "Tuproq va cho'kindi jinslarni tahlil",
       ],
       capacity: "1500-15000 namuna/yil",
+      image: "/xizmat3.webp",
     },
     {
       icon: Mountain,
@@ -112,6 +114,7 @@ export function Services({ className }: ServicesProps) {
         "Ekologik geologik baholash",
       ],
       depths: "10-100 metr chuqurlik",
+      image: "/xizmat4.jpg",
     },
   ]
 
