@@ -93,6 +93,7 @@ export interface EmployeesByDepartment {
   management: Employee[]
   specialists: Employee[]
   assistants: Employee[]
+  bugalter: Employee[]
 }
 
 export interface CompanyTeamProps {

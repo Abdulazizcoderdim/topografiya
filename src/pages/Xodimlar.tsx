@@ -19,7 +19,7 @@ export function Xodimlar({ className }: CompanyTeamProps) {
         phone: "+998 99 035 91 92",
         diplomaLink: "/xodimlar/diplom.pdf",
         specialization: ["Geodeziya", "Topografiya", "Raqamli kadastr", "Boshqaruv"],
-        experience: "10+ yillik tajribaga ega geodeziya va kartografiya sohasining yetakchi mutaxassisi. 100 dan ortiq ilmiy maqola va 5 ta monografiya muallifi.",
+        experience: "110006 – Geodeziya, kartografiya mutaxassisligi texnika fanlari falsafa doktori (PhD), dotsent Fayziyev Shohrux Shamsi o‘g‘li.",
       },
     ],
     specialists: [
@@ -98,7 +98,7 @@ export function Xodimlar({ className }: CompanyTeamProps) {
         fullName: "NURIDDINOV UMIRZOQ FAYZULLA O‘G‘LI",
         position: "Муҳандис топограф",
         startDate: "2025-07-13",
-        photo: "/xodimlar/ad.png",
+        photo: "/xodimlar/umir.png",
         email: "umirzod@gmail.com",
         phone: "+998 93 072 44 55",
         specialization: ["Geodezik tarmoq qurilishi", "Chegara belgilarini o'rnatish", "Топограф"],
@@ -115,6 +115,28 @@ export function Xodimlar({ className }: CompanyTeamProps) {
         phone: "+998 90 567 89 01",
         specialization: ["Dala ishlari", "Uskunalar tayyorlash", "Ma'lumotlar yig'ish"],
       },
+       {
+        id: "9",
+        fullName: "ABDUVALIYEV MUHAMMADSODIQ MAHMUD O‘G‘LI",
+        position: "Геодезист",
+        startDate: "2025-07-13",
+        photo: "/xodimlar/muhammad.png",
+        email: "muhammadsodiq@gmail.com",
+        phone: "+998 93 072 44 55",
+        specialization: ["Ёрдамчи ишчи", "Бош геодезист", "Геодезист"],
+      },
+    ],
+    bugalter: [
+      {
+        id: "11",
+        fullName: "SAYIDOVA ZULXUMOR SHAMSIYEVNA",
+        position: "Бухгалтер",
+        startDate: "2024-08-15",
+        photo: "/xodimlar/bug.png",
+        email: "",
+        phone: "",
+        specialization: ["Moliyaviy hisobotlar", "Soliq hisoboti", "Byudjet boshqaruvi"],
+      }
     ],
   }
 
@@ -151,7 +173,7 @@ export function Xodimlar({ className }: CompanyTeamProps) {
           <p className="text-xl text-gray-600">"Topografiya va raqamli kadastr" MCHJ ning professional xodimlari</p>
           <div className="mt-4 text-sm text-gray-500">
             Jami xodimlar soni:{" "}
-            {employees.management.length + employees.specialists.length + employees.assistants.length} kishi
+            {employees.management.length + employees.specialists.length + employees.assistants.length + employees.bugalter.length} kishi
           </div>
         </div>
 
@@ -297,6 +319,71 @@ export function Xodimlar({ className }: CompanyTeamProps) {
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Yordamchi xodimlar</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {employees.assistants.map((employee) => (
+              <Card key={employee.id} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center gap-3">
+                      {employee.photo && 
+                      <div className="w-16 h-16 relative rounded-full overflow-hidden">
+                        <img
+                          src={employee.photo || "/placeholder.svg"}
+                          alt={employee.fullName}
+                          className="object-cover w-full h-full"
+                          />
+                      </div>
+                      }
+                    <div>
+                      <CardTitle className="text-lg">{employee.fullName}</CardTitle>
+                      <CardDescription className="text-blue-600">{employee.position}</CardDescription>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    <Badge variant="secondary" className="text-xs">
+                      <Calendar className="w-3 h-3 mr-1" />
+                      {formatDate(employee.startDate)}
+                    </Badge>
+                    <Badge variant="outline" className="text-xs">
+                      {calculateExperience(employee.startDate)}
+                    </Badge>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  {employee.specialization && (
+                    <div>
+                      <p className="text-xs font-medium text-gray-600 mb-1">Vazifalar:</p>
+                      <div className="flex flex-wrap gap-1">
+                        {employee.specialization.map((spec, index) => (
+                          <Badge key={index} variant="outline" className="text-xs">
+                            {spec}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  <div className="space-y-1">
+                    {employee.email && (
+                      <Button variant="outline" size="sm" className="w-full bg-transparent">
+                        <Mail className="h-4 w-4 mr-2" />
+                        {employee.email}
+                      </Button>
+                    )}
+                    {employee.phone && (
+                      <Button variant="outline" size="sm" className="w-full bg-transparent">
+                        <Phone className="h-4 w-4 mr-2" />
+                        {employee.phone}
+                      </Button>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Bugalter */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">Bug'alter</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {employees.bugalter.map((employee) => (
               <Card key={employee.id} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center gap-3">
