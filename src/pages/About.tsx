@@ -48,9 +48,6 @@ export function About() {
     { src: "/work7.jpg", title: "Texnik hujjatlarni tayyorlash" },
     { src: "/work8.jpg", title: "Sifat nazorati va tekshirish" },
     { src: "/work9.jpg", title: "Mijoz bilan maslahatlashish" },
-    // { src: "/work10.jpg", title: "Loyiha hujjatlarini taqdim etish" },
-    // { src: "/work11.jpg", title: "Dala ishlarini yakunlash" },
-    // { src: "/work12.jpg", title: "Final natijalarni tahlil qilish" },
   ]
 
   const workVideo = {
